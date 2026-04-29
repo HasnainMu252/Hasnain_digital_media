@@ -162,6 +162,6 @@ function initCaseStudySlider() {
   modalClose.addEventListener('click', closeCaseModal);
   modalOverlay.addEventListener('click', closeCaseModal);
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && modal.classList.contains('show')) closeCaseModal();
+    if (event.key === 'Escape' && modal.cfc3dc31a9d2825bd2988648411a3d3137445ce38lassList.contains('show')) closeCaseModal();
   });
 }

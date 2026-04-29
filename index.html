@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="description" content="Muhammad Hasnain Munir — Shopify Store Developer, WordPress Expert & Full Stack Developer in Karachi, Pakistan. I build eCommerce stores, Dropshipping setups & WooCommerce sites. Starting from $100.">
-    <meta name="keywords" content="Shopify developer Pakistan, WordPress developer Karachi, eCommerce developer, WooCommerce store, dropshipping setup, MERN stack developer">
+    <meta name="description"
+        content="Muhammad Hasnain Munir — Shopify Store Developer, WordPress Expert & Full Stack Developer in Karachi, Pakistan. I build eCommerce stores, Dropshipping setups & WooCommerce sites. Starting from $100.">
+    <meta name="keywords"
+        content="Shopify developer Pakistan, WordPress developer Karachi, eCommerce developer, WooCommerce store, dropshipping setup, MERN stack developer">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,902 +14,1140 @@
     <title>Hasnain Munir | Shopify & WordPress Developer | eCommerce Expert Karachi</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
-<div id="particles-js"></div>
-<div class="progress-bar" id="progressBar"></div>
+    <div id="particles-js"></div>
+    <div class="progress-bar" id="progressBar"></div>
 
-<nav class="side-nav" aria-label="Section navigation">
-    <a href="#home" class="side-dot active" data-label="Home" aria-label="Home"></a>
-    <a href="#about" class="side-dot" data-label="About" aria-label="About"></a>
-    <a href="#services" class="side-dot" data-label="Services" aria-label="Services"></a>
-    <a href="#skills" class="side-dot" data-label="Skills" aria-label="Skills"></a>
-    <a href="#projects" class="side-dot" data-label="Projects" aria-label="Projects"></a>
-    <a href="#experience" class="side-dot" data-label="Experience" aria-label="Experience"></a>
-    <a href="#contact" class="side-dot" data-label="Contact" aria-label="Contact"></a>
-</nav>
+    <nav class="side-nav" aria-label="Section navigation">
+        <a href="#home" class="side-dot active" data-label="Home" aria-label="Home"></a>
+        <a href="#about" class="side-dot" data-label="About" aria-label="About"></a>
+        <a href="#services" class="side-dot" data-label="Services" aria-label="Services"></a>
+        <a href="#skills" class="side-dot" data-label="Skills" aria-label="Skills"></a>
+        <a href="#projects" class="side-dot" data-label="Projects" aria-label="Projects"></a>
+        <a href="#experience" class="side-dot" data-label="Experience" aria-label="Experience"></a>
+        <a href="#contact" class="side-dot" data-label="Contact" aria-label="Contact"></a>
+    </nav>
 
-<div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-<!-- Theme Switcher -->
-<div class="theme-switcher">
-    <button class="theme-btn active" data-theme="dark" title="Dark"><i class="fas fa-moon"></i></button>
-    <button class="theme-btn" data-theme="light" title="Light"><i class="fas fa-sun"></i></button>
-    <button class="theme-btn" data-theme="neon" title="Neon"><i class="fas fa-bolt"></i></button>
-</div>
-
-<!-- ===== HIRE POPUP MODAL ===== -->
-<div class="modal-overlay" id="hireModal">
-    <div class="modal-box">
-        <div class="modal-header">
-            <div class="modal-icon"><i class="fas fa-handshake"></i></div>
-            <div class="modal-header-text">
-                <h2>Let's Work Together!</h2>
-                <p>Fill the form & I'll reply within 24 hours</p>
-            </div>
-            <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
-        </div>
-
-        <!-- Progress Steps -->
-        <div class="modal-steps">
-            <div class="step active" data-step="1">
-                <div class="step-num">1</div>
-                <span>Info</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step" data-step="2">
-                <div class="step-num">2</div>
-                <span>Service</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step" data-step="3">
-                <div class="step-num">3</div>
-                <span>Details</span>
-            </div>
-        </div>
-
-        <form id="hireForm" action="https://formspree.io/f/xojynplo" method="POST">
-            <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
-
-            <!-- Step 1: Personal Info -->
-            <div class="form-step" id="step1">
-                <div class="step-title"><i class="fas fa-user"></i> Your Information</div>
-                <div class="modal-grid">
-                    <div class="mfg">
-                        <label>Full Name *</label>
-                        <input type="text" name="name" id="hire_name" placeholder="Your name" required>
-                    </div>
-                    <div class="mfg">
-                        <label>Email Address *</label>
-                        <input type="email" name="_replyto" id="hire_email" placeholder="Your email address" required>
-                    </div>
-                    <div class="mfg">
-                        <label>Phone / WhatsApp</label>
-                        <input type="tel" name="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="mfg">
-                        <label>Company Name</label>
-                        <input type="text" name="company" placeholder="Your Company (optional)">
-                    </div>
-                </div>
-                <div class="step-btns">
-                    <button type="button" class="btn btn-primary next-step" data-next="2">
-                        Next <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Step 2: Service Selection -->
-            <div class="form-step hidden" id="step2">
-                <div class="step-title"><i class="fas fa-cogs"></i> Select Service</div>
-                <div class="service-grid">
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Full Stack Web Development" required>
-                        <div class="srv-card">
-                            <i class="fas fa-globe" style="color:#7c3aed"></i>
-                            <span>Full Stack Web</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="MERN Stack Application">
-                        <div class="srv-card">
-                            <i class="fab fa-react" style="color:#61dafb"></i>
-                            <span>MERN Stack</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Mobile App React Native">
-                        <div class="srv-card">
-                            <i class="fas fa-mobile-alt" style="color:#f59e0b"></i>
-                            <span>Mobile App</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Backend API Development">
-                        <div class="srv-card">
-                            <i class="fas fa-server" style="color:#10b981"></i>
-                            <span>Backend API</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="WordPress Development">
-                        <div class="srv-card">
-                            <i class="fab fa-wordpress" style="color:#21759b"></i>
-                            <span>WordPress</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Shopify Store">
-                        <div class="srv-card">
-                            <i class="fab fa-shopify" style="color:#96bf48"></i>
-                            <span>Shopify</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Video Editing">
-                        <div class="srv-card">
-                            <i class="fas fa-video" style="color:#ef4444"></i>
-                            <span>Video Editing</span>
-                        </div>
-                    </label>
-                    <label class="srv-opt">
-                        <input type="radio" name="service" value="Database Design">
-                        <div class="srv-card">
-                            <i class="fas fa-database" style="color:#f59e0b"></i>
-                            <span>Database</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="step-btns">
-                    <button type="button" class="btn btn-outline prev-step" data-prev="1">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </button>
-                    <button type="button" class="btn btn-primary next-step" data-next="3">
-                        Next <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Step 3: Project Details -->
-            <div class="form-step hidden" id="step3">
-                <div class="step-title"><i class="fas fa-file-alt"></i> Project Details</div>
-                <div class="modal-grid">
-                    <div class="mfg">
-                        <label>Budget Range</label>
-                        <select name="budget">
-                            <option value="">Select Budget</option>
-                            <option>Less than $500</option>
-                            <option>$500 - $1,000</option>
-                            <option>$1,000 - $3,000</option>
-                            <option>$3,000 - $5,000</option>
-                            <option>$5,000+</option>
-                            <option>Let's Discuss</option>
-                        </select>
-                    </div>
-                    <div class="mfg">
-                        <label>Timeline</label>
-                        <select name="timeline">
-                            <option value="">Select Timeline</option>
-                            <option>ASAP</option>
-                            <option>1-2 weeks</option>
-                            <option>1 month</option>
-                            <option>2-3 months</option>
-                            <option>3+ months</option>
-                            <option>Ongoing</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="mfg full">
-                    <label>Project Description *</label>
-                    <textarea name="message" rows="4" placeholder="Describe your project in detail..." required></textarea>
-                </div>
-                <div class="step-btns">
-                    <button type="button" class="btn btn-outline prev-step" data-prev="2">
-                        <i class="fas fa-arrow-left"></i> Back
-                    </button>
-                    <button type="submit" class="btn btn-primary modal-submit">
-                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Request</span>
-                        <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
-                    </button>
-                </div>
-            </div>
-
-            <div id="hireFormMsg" class="form-msg"></div>
-        </form>
-
-        <!-- Success Screen -->
-        <div class="modal-success" id="modalSuccess">
-            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-            <h3>Request Sent Successfully!</h3>
-            <p>Thank you! I'll contact you within 24 hours.</p>
-            <p class="success-sub">Meanwhile, feel free to reach me on WhatsApp:</p>
-            <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20just%20submitted%20a%20hire%20request." target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-            <button class="btn btn-outline" id="closeSuccess">Close</button>
-        </div>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn active" data-theme="dark" title="Dark"><i class="fas fa-moon"></i></button>
+        <button class="theme-btn" data-theme="light" title="Light"><i class="fas fa-sun"></i></button>
+        <button class="theme-btn" data-theme="neon" title="Neon"><i class="fas fa-bolt"></i></button>
     </div>
-</div>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="whatsapp-float" id="waFloat">
-    <i class="fab fa-whatsapp"></i>
-    <span class="wa-tooltip">Get Free Quote!</span>
-</a>
+    <!-- ===== HIRE POPUP MODAL ===== -->
+    <div class="modal-overlay" id="hireModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-handshake"></i></div>
+                <div class="modal-header-text">
+                    <h2>Let's Work Together!</h2>
+                    <p>Fill the form & I'll reply within 24 hours</p>
+                </div>
+                <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+            </div>
 
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-    <div class="container">
-        <div class="logo">
-            <h2><span class="bracket">&lt;</span>Hasnain<span class="dot">.</span>dev<span class="bracket">/&gt;</span></h2>
-        </div>
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="#services" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
-            <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
-            <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
-            <li><a href="#pricing" class="nav-link"><i class="fas fa-tags"></i> Pricing</a></li>
-            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-    </div>
-</nav>
-
-<!-- ===== HERO ===== -->
-<section id="home" class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text" data-aos="fade-right" data-aos-duration="600">
-                <p class="greeting">👋 Hi there, I'm</p>
-                <h1 class="name">Muhammad Hasnain Munir</h1>
-                <div class="title-wrapper">
-                    <h2 class="title">I'm a <span class="typed-text"></span><span class="cursor">|</span></h2>
+            <!-- Progress Steps -->
+            <div class="modal-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-num">1</div>
+                    <span>Info</span>
                 </div>
-                <p class="description">
-                    🚀 Helping businesses launch <span class="highlight">Shopify Stores</span>, <span class="highlight">WordPress Sites</span> &amp; custom web apps — fast, affordable, and built to grow your revenue.
-                </p>
-                <div class="stats-wrapper">
-                    <div class="stat-item"><h3 class="counter" data-target="100">0</h3><p>Projects</p></div>
-                    <div class="stat-item"><h3 class="counter" data-target="4">0</h3><p>Years Exp</p></div>
-                    <div class="stat-item"><h3 class="counter" data-target="95">0</h3><p>Happy Clients</p></div>
-                    
+                <div class="step-line"></div>
+                <div class="step" data-step="2">
+                    <div class="step-num">2</div>
+                    <span>Service</span>
                 </div>
-               
-                  <div class="hero-buttons">
-                    <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
-                    <a href="resume/hasnain-resume.pdf" download="Muhammad-Hasnain-Munir-Resume.pdf" class="btn btn-secondary"><i class="fas fa-download"></i> Resume</a>
-                    <a href="#projects" class="btn btn-outline"><i class="fas fa-eye"></i> Work</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/hasnainmuneer" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i><span class="tooltip">LinkedIn</span></a>
-                    <a href="https://github.com/HasnainMu252" target="_blank" class="social-link"><i class="fab fa-github"></i><span class="tooltip">GitHub</span></a>
-                    <a href="mailto:Hasnainmuneer@gmail.com" class="social-link"><i class="fas fa-envelope"></i><span class="tooltip">Email</span></a>
-                    <a href="https://wa.me/923122958077" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+                <div class="step-line"></div>
+                <div class="step" data-step="3">
+                    <div class="step-num">3</div>
+                    <span>Details</span>
                 </div>
             </div>
 
-            <div class="hero-image" data-aos="fade-left" data-aos-duration="600">
-                <div class="image-wrapper">
-                    <div class="ring ring-1"></div>
-                    <div class="ring ring-2"></div>
-                    <div class="profile-card">
-                        <div class="card-glow"></div>
-                        <div class="profile-img">
-                            <img loading="eager" decoding="async" fetchpriority="high" src="images/ChatGPT Image Apr 21, 2026, 01_27_53 PM.png"
-                                 onerror="this.src='https://ui-avatars.com/api/?name=Hasnain+Munir&size=400&background=7c3aed&color=fff&bold=true'"
-                                 alt="Muhammad Hasnain Munir">
+            <form id="hireForm" action="https://formspree.io/f/xojynplo" method="POST">
+                <input type="hidden" name="_subject" value="New Hire Request from Portfolio">
+
+                <!-- Step 1: Personal Info -->
+                <div class="form-step" id="step1">
+                    <div class="step-title"><i class="fas fa-user"></i> Your Information</div>
+                    <div class="modal-grid">
+                        <div class="mfg">
+                            <label>Full Name *</label>
+                            <input type="text" name="name" id="hire_name" placeholder="Your name" required>
+                        </div>
+                        <div class="mfg">
+                            <label>Email Address *</label>
+                            <input type="email" name="_replyto" id="hire_email" placeholder="Your email address"
+                                required>
+                        </div>
+                        <div class="mfg">
+                            <label>Phone / WhatsApp</label>
+                            <input type="tel" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mfg">
+                            <label>Company Name</label>
+                            <input type="text" name="company" placeholder="Your Company (optional)">
                         </div>
                     </div>
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        <span>Available for work</span>
+                    <div class="step-btns">
+                        <button type="button" class="btn btn-primary next-step" data-next="2">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <div class="tech-badge badge-react"><i class="fab fa-react"></i> React</div>
-                    <div class="tech-badge badge-node"><i class="fab fa-shopify"></i> Shopify</div>
-                    <div class="tech-badge badge-mongo"><i class="fab fa-wordpress"></i> WordPress</div>
                 </div>
-            </div>
-        </div>
-        <div class="scroll-down"><a href="#about"><i class="fas fa-chevron-down"></i></a></div>
-    </div>
-</section>
 
-<!-- ===== PAIN POINTS ===== -->
-<section id="pain" class="pain-section">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-exclamation-circle"></i> Sound Familiar?</span>
-            <h2 class="section-title">Does This Sound Like You?</h2>
-            <p class="section-sub">You're not alone — I've helped 10+ clients solve exactly these problems</p>
-        </div>
-        <div class="pain-grid" data-aos="fade-up">
-            <div class="pain-card">
-                <div class="pain-icon">😩</div>
-                <h4>"I need a professional store but don't know where to start"</h4>
-                <p>I handle everything from domain setup to launch — you just share your vision.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">💸</div>
-                <h4>"I paid someone before and got a bad, unfinished result"</h4>
-                <p>I offer free revisions until you're 100% satisfied. No payment until you approve.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">⏰</div>
-                <h4>"I need it done fast — I can't wait months"</h4>
-                <p>Most projects launch in 5–14 days. I give you updates every 2 days.</p>
-            </div>
-            <div class="pain-card">
-                <div class="pain-icon">🌍</div>
-                <h4>"I want to sell internationally but don't know how"</h4>
-                <p>I set up international payments, currencies, and shipping — Shopify or WooCommerce.</p>
-            </div>
-        </div>
-        <div class="pain-cta" data-aos="fade-up">
-            <p>Ready to solve this once and for all?</p>
-            <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20help%20with%20my%20website." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Let's Talk — Free Consultation</a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="about">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
-            <h2 class="section-title">Who I Am</h2>
-        </div>
-        <div class="about-content">
-            <div class="about-image" data-aos="fade-right">
-                <div class="about-img-box">
-                    <img loading="lazy" decoding="async" src="images/ChatGPT Image Apr 21, 2026, 01_25_13 PM.png"
-                         onerror="this.src='https://ui-avatars.com/api/?name=Hasnain+Munir&size=500&background=7c3aed&color=fff&bold=true'"
-                         alt="Hasnain Munir">
-                    <div class="exp-badge"><h3>4+</h3><p>Years Exp</p></div>
-                </div>
-            </div>
-            <div class="about-text" data-aos="fade-left">
-                <h3>Full Stack <span class="highlight">MERN Developer</span></h3>
-                <p>Passionate Software Engineering graduate from <strong>Iqra University</strong>, specializing in building exceptional digital experiences with modern technologies.</p>
-                <p>Currently working as <strong>MERN Stack Developer</strong> at EduCast Pvt Ltd, building healthcare systems and scalable web applications.</p>
-                <div class="about-grid">
-                    <div class="about-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Karachi, Pakistan</p></div></div>
-                    <div class="about-item"><i class="fas fa-graduation-cap"></i><div><h4>Education</h4><p>BS Computer Science</p></div></div>
-                    <div class="about-item"><i class="fas fa-briefcase"></i><div><h4>Experience</h4><p>4+ Years</p></div></div>
-                    <div class="about-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>0312-2958077</p></div></div>
-                </div>
-                <div class="about-btns">
-                    <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section id="services" class="services">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-cogs"></i> What I Do</span>
-            <h2 class="section-title">My Services</h2>
-            <p class="section-sub">Professional services tailored to your needs</p>
-        </div>
-        <div class="services-grid">
-            <div class="srv-box" data-aos="fade-up" data-aos-delay="50">
-                <div class="srv-icon" style="background:linear-gradient(135deg,#7c3aed,#9d5cf5)">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3>Full Stack Development</h3>
-                <p>End-to-end web applications using MERN stack (MongoDB, Express, React, Node.js) with modern UI/UX and scalable architecture.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> React.js Frontend</li>
-                    <li><i class="fas fa-check"></i> Node.js/Express Backend</li>
-                    <li><i class="fas fa-check"></i> MongoDB / PostgreSQL</li>
-                    <li><i class="fas fa-check"></i> REST APIs & JWT Auth</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$500</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-
-            <div class="srv-box featured" data-aos="fade-up" data-aos-delay="100">
-                <div class="featured-badge">⭐ Most Popular</div>
-                <div class="srv-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Mobile App Development</h3>
-                <p>Cross-platform mobile applications using React Native that run on both iOS and Android with native performance.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> React Native Apps</li>
-                    <li><i class="fas fa-check"></i> iOS & Android</li>
-                    <li><i class="fas fa-check"></i> Firebase Integration</li>
-                    <li><i class="fas fa-check"></i> Push Notifications</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$800</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-
-            <div class="srv-box" data-aos="fade-up" data-aos-delay="150">
-                <div class="srv-icon" style="background:linear-gradient(135deg,#21759b,#4096c4)">
-                    <i class="fab fa-wordpress"></i>
-                </div>
-                <h3>WordPress Development</h3>
-                <p>Professional WordPress websites with custom themes, plugins, WooCommerce stores and SEO optimization.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> Custom Theme Design</li>
-                    <li><i class="fas fa-check"></i> WooCommerce Store</li>
-                    <li><i class="fas fa-check"></i> Plugin Development</li>
-                    <li><i class="fas fa-check"></i> SEO Optimization</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$300</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-
-            <div class="srv-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="srv-icon" style="background:linear-gradient(135deg,#96bf48,#5e8e3e)">
-                    <i class="fab fa-shopify"></i>
-                </div>
-                <h3>Shopify Development</h3>
-                <p>Complete Shopify e-commerce stores with custom themes, product management, payment integration and optimization.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> Custom Shopify Theme</li>
-                    <li><i class="fas fa-check"></i> Product Management</li>
-                    <li><i class="fas fa-check"></i> Payment Integration</li>
-                    <li><i class="fas fa-check"></i> Store Optimization</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$400</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-
-            <div class="srv-box" data-aos="fade-up" data-aos-delay="250">
-                <div class="srv-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">
-                    <i class="fas fa-video"></i>
-                </div>
-                <h3>Video Editing</h3>
-                <p>Professional video editing for YouTube, social media, business presentations, reels and promotional content.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> YouTube Videos</li>
-                    <li><i class="fas fa-check"></i> Social Media Reels</li>
-                    <li><i class="fas fa-check"></i> Motion Graphics</li>
-                    <li><i class="fas fa-check"></i> Color Grading</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$50</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-
-            <div class="srv-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="srv-icon" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Backend & API Development</h3>
-                <p>Robust, scalable backend systems using Node.js, NestJS with REST APIs, JWT authentication and database design.</p>
-                <ul class="srv-list">
-                    <li><i class="fas fa-check"></i> RESTful APIs</li>
-                    <li><i class="fas fa-check"></i> JWT Authentication</li>
-                    <li><i class="fas fa-check"></i> Database Design</li>
-                    <li><i class="fas fa-check"></i> NestJS / Node.js</li>
-                </ul>
-                <div class="srv-price">Starting from <strong>$300</strong></div>
-                <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
-            </div>
-        </div>
-
-        <!-- CTA Banner -->
-        <div class="services-cta" data-aos="fade-up">
-            <div class="cta-content">
-                <h3>Not sure which service you need?</h3>
-                <p>Let's talk! I'll help you figure out the best solution for your project.</p>
-                <div class="cta-btns">
-                    <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
-                    <a href="https://wa.me/923122958077?text=Hi%20Hasnain!" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== HOW IT WORKS ===== -->
-<section id="process" class="how-it-works">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-route"></i> Simple Process</span>
-            <h2 class="section-title">How We Work Together</h2>
-            <p class="section-sub">From first message to a live website — here's exactly what happens</p>
-        </div>
-        <div class="process-grid" data-aos="fade-up">
-            <div class="process-step">
-                <div class="process-num">01</div>
-                <div class="process-icon"><i class="fab fa-whatsapp"></i></div>
-                <h4>You Contact Me</h4>
-                <p>Message me on WhatsApp or fill the form. Tell me what you need — no technical knowledge required.</p>
-                <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20a%20website." target="_blank" class="process-link">Start Here →</a>
-            </div>
-            <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
-            <div class="process-step">
-                <div class="process-num">02</div>
-                <div class="process-icon"><i class="fas fa-comments"></i></div>
-                <h4>Free Consultation</h4>
-                <p>We have a quick call or chat to discuss your goals, timeline, and budget. I recommend the best solution.</p>
-                <span class="process-tag">Within 2–4 Hours</span>
-            </div>
-            <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
-            <div class="process-step">
-                <div class="process-num">03</div>
-                <div class="process-icon"><i class="fas fa-laptop-code"></i></div>
-                <h4>I Build It</h4>
-                <p>Development begins. I send you progress updates every 2 days so you're always in the loop.</p>
-                <span class="process-tag">5–14 Days</span>
-            </div>
-            <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
-            <div class="process-step">
-                <div class="process-num">04</div>
-                <div class="process-icon"><i class="fas fa-rocket"></i></div>
-                <h4>You Launch 🚀</h4>
-                <p>You review, request any changes, then we go live. I also train you to manage it yourself.</p>
-                <span class="process-tag">2 Weeks Free Support</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="skills">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-code"></i> My Skills</span>
-            <h2 class="section-title">Technical Expertise</h2>
-        </div>
-        <div class="skills-wrapper">
-            <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="skill-box-header"><div class="skill-box-icon"><i class="fas fa-palette"></i></div><h3>Frontend</h3></div>
-                <div class="skill-list">
-                    <div class="skill-item"><div class="skill-info"><i class="fab fa-react" style="color:#61dafb"></i><span>React.js</span><span class="pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fab fa-js" style="color:#f7df1e"></i><span>JavaScript</span><span class="pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML5/CSS3</span><span class="pct">95%</span></div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
-                </div>
-            </div>
-            <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="skill-box-header"><div class="skill-box-icon"><i class="fas fa-server"></i></div><h3>Backend</h3></div>
-                <div class="skill-list">
-                    <div class="skill-item"><div class="skill-info"><i class="fab fa-node-js" style="color:#68a063"></i><span>Node.js</span><span class="pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-code" style="color:#aaa"></i><span>Express.js</span><span class="pct">87%</span></div><div class="skill-bar"><div class="skill-fill" data-width="87"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-shield-alt" style="color:#e0234e"></i><span>NestJS</span><span class="pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-key" style="color:#f59e0b"></i><span>JWT/REST API</span><span class="pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
-                </div>
-            </div>
-            <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="skill-box-header"><div class="skill-box-icon"><i class="fas fa-database"></i></div><h3>Database & Tools</h3></div>
-                <div class="skill-list">
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-leaf" style="color:#47a248"></i><span>MongoDB</span><span class="pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-database" style="color:#336791"></i><span>PostgreSQL</span><span class="pct">82%</span></div><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fab fa-git-alt" style="color:#f05032"></i><span>Git/GitHub</span><span class="pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><i class="fas fa-fire" style="color:#ffca28"></i><span>Firebase</span><span class="pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
-                </div>
-            </div>
-        </div>
-        <div class="tech-tags" data-aos="fade-up">
-            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Express.js</span>
-            <span>NestJS</span><span>PostgreSQL</span><span>React Native</span><span>TypeORM</span>
-            <span>JWT</span><span>Git</span><span>Firebase</span><span>WordPress</span>
-            <span>Shopify</span><span>Android</span><span>Agile</span>
-        </div>
-    </div>
-</section>
-
-
-<!-- ===== EXPERIENCE ===== -->
-<section id="experience" class="experience">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-briefcase"></i> Journey</span>
-            <h2 class="section-title">Experience & Education</h2>
-        </div>
-        <div class="timeline">
-            <div class="tl-item" data-aos="fade-right">
-                <div class="tl-icon working"><i class="fas fa-briefcase"></i></div>
-                <div class="tl-content">
-                    <div class="tl-date"><i class="fas fa-calendar-alt"></i> Nov 2025 – Present</div>
-                    <h3>MERN Stack Developer</h3>
-                    <h4><i class="fas fa-building"></i> EduCast Pvt Ltd</h4>
-                    <ul><li>Full-stack Dialysis Management System</li><li>Scalable React.js & RESTful APIs</li><li>MongoDB optimization</li></ul>
-                    <div class="tl-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
-                </div>
-            </div>
-            <div class="tl-item right" data-aos="fade-left">
-                <div class="tl-icon"><i class="fas fa-university"></i></div>
-                <div class="tl-content">
-                    <div class="tl-date"><i class="fas fa-calendar-alt"></i> July – Oct 2025</div>
-                    <h3>IT Intern</h3>
-                    <h4><i class="fas fa-landmark"></i> Meezan Bank</h4>
-                    <ul><li>Mobile App deployment</li><li>EMI FinTech & Payoneer integration</li><li>API management</li></ul>
-                    <div class="tl-tags"><span>API</span><span>Banking</span><span>Mobile</span></div>
-                </div>
-            </div>
-            <div class="tl-item" data-aos="fade-right">
-                <div class="tl-icon edu"><i class="fas fa-graduation-cap"></i></div>
-                <div class="tl-content">
-                    <div class="tl-date"><i class="fas fa-calendar-alt"></i> 2021 – 2025</div>
-                    <h3>BS Computer Science</h3>
-                    <h4><i class="fas fa-school"></i> Iqra University, Karachi</h4>
-                    <ul><li>Java, JavaScript, OOP & DSA</li><li>Database Management & SDLC</li></ul>
-                    <div class="tl-tags"><span>CS</span><span>OOP</span><span>DSA</span></div>
-                </div>
-            </div>
-            <div class="tl-item right" data-aos="fade-left">
-                <div class="tl-icon cert"><i class="fas fa-certificate"></i></div>
-                <div class="tl-content">
-                    <div class="tl-date"><i class="fas fa-calendar-alt"></i> April – May 2025</div>
-                    <h3>Full Stack Bootcamp</h3>
-                    <h4><i class="fas fa-laptop-code"></i> Ponder Alliance by Contour</h4>
-                    <ul><li>NestJS, ReactJS & PostgreSQL</li><li>JWT Authentication & CRUD</li></ul>
-                    <div class="tl-tags"><span>NestJS</span><span>React</span><span>PostgreSQL</span></div>
-                </div>
-            </div>
-            <div class="tl-item" data-aos="fade-right">
-                <div class="tl-icon cert"><i class="fas fa-mobile-alt"></i></div>
-                <div class="tl-content">
-                    <div class="tl-date"><i class="fas fa-calendar-alt"></i> Feb – May 2024</div>
-                    <h3>Android Development</h3>
-                    <h4><i class="fas fa-chalkboard-teacher"></i> NAVTTC</h4>
-                    <ul><li>Java/Kotlin & Android Studio</li><li>Firebase & Play Store deployment</li></ul>
-                    <div class="tl-tags"><span>Android</span><span>Java</span><span>Firebase</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" class="testimonials-section">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-star"></i> Reviews</span>
-            <h2 class="section-title">What Clients Say</h2>
-            <p class="section-sub">Real feedback from real clients across Pakistan, UAE & UK</p>
-        </div>
-        <div class="testimonials-wrapper" data-aos="fade-up">
-            <div class="tst-card">
-                <div class="tst-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Hasnain built my Shopify dropshipping store in just 6 days. Very professional, responsive, and the design was exactly what I wanted. Sales started coming in the first week!"</p>
-                <div class="tst-author">
-                    <div class="tst-avatar">AK</div>
-                    <div><strong>Ahmed K.</strong> 🇵🇰<br><small>Shopify Dropshipping Store</small></div>
-                </div>
-            </div>
-            <div class="tst-card">
-                <div class="tst-stars">⭐⭐⭐⭐⭐</div>
-                <p>"Excellent WordPress website built for my business. Very clean, fast, and mobile-friendly. Hasnain explained everything clearly and delivered on time. Highly recommend!"</p>
-                <div class="tst-author">
-                    <div class="tst-avatar">SR</div>
-                    <div><strong>Sara R.</strong> 🇬🇧<br><small>WordPress Business Website</small></div>
-                </div>
-            </div>
-            <div class="tst-card">
-                <div class="tst-stars">⭐⭐⭐⭐⭐</div>
-                <p>"I needed a WooCommerce store fast and Hasnain delivered in 10 days. The payment integration and inventory setup worked perfectly. Will hire again for my next project."</p>
-                <div class="tst-author">
-                    <div class="tst-avatar">MF</div>
-                    <div><strong>Mohammad F.</strong> 🇦🇪<br><small>WooCommerce eCommerce Store</small></div>
-                </div>
-            </div>
-        </div>
-        <div class="tst-cta" data-aos="fade-up">
-            <p>⭐ Join 10+ happy clients — let's build yours next</p>
-            <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Start My Project</button>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PRICING ===== -->
-<section id="pricing" class="pricing-section price-card featured">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-tags"></i> Pricing</span>
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-sub">No hidden fees. No surprises. Pay only when you're happy.</p>
-        </div>
-        <div class="pricing-grid" data-aos="fade-up">
-            <div class="price-card">
-                <div class="price-label">Starter</div>
-                <div class="price-amount">$99<span>/project</span></div>
-                <ul class="price-list">
-                    <li><i class="fas fa-check"></i> WordPress Basic Site</li>
-                    <li><i class="fas fa-check"></i> Up to 5 pages</li>
-                    <li><i class="fas fa-check"></i> Mobile Responsive</li>
-                    <li><i class="fas fa-check"></i> Contact Form</li>
-                    <li><i class="fas fa-check"></i> 1 Week Delivery</li>
-                    <li><i class="fas fa-check"></i> 1 Week Free Support</li>
-                </ul>
-                <button class="btn btn-outline hire-btn">Get Started</button>
-            </div>
-            <div class="price-card featured">
-                <div class="price-badge">⭐ Most Popular</div>
-                <div class="price-label">Business</div>
-                <div class="price-amount">$199<span>/project</span></div>
-                <ul class="price-list">
-                    <li><i class="fas fa-check"></i> Shopify or WooCommerce</li>
-                    <li><i class="fas fa-check"></i> Up to 20 products</li>
-                    <li><i class="fas fa-check"></i> Payment Integration</li>
-                    <li><i class="fas fa-check"></i> SEO Basic Setup</li>
-                    <li><i class="fas fa-check"></i> 2 Weeks Delivery</li>
-                    <li><i class="fas fa-check"></i> 2 Weeks Free Support</li>
-                </ul>
-                <button class="btn btn-primary hire-btn">Get Started</button>
-            </div>
-            <div class="price-card">
-                <div class="price-label">Premium</div>
-                <div class="price-amount">$1000+<span>/project</span></div>
-                <ul class="price-list">
-                    <li><i class="fas fa-check"></i> Full Stack Web App</li>
-                    <li><i class="fas fa-check"></i> Custom Features</li>
-                    <li><i class="fas fa-check"></i> Admin Dashboard</li>
-                    <li><i class="fas fa-check"></i> Advanced SEO</li>
-                    <li><i class="fas fa-check"></i> Custom Timeline</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
-                <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20a%20custom%20quote." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Let's Discuss</a>
-            </div>
-        </div>
-        <p class="pricing-note" data-aos="fade-up">💬 Not sure which plan fits? <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20help%20choosing%20a%20plan." target="_blank">Message me on WhatsApp</a> — I'll recommend the right one for free.</p>
-    </div>
-</section>
-
-<section id="projects" class="projects-slider">
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide">
-        <img src="./images/case1.png" alt="Project 1">
-        <h3 class="project-title">Zelvyn Lifestyle
-        </h3>
-        <p class="project-description">This is a brief description of Project 1, explaining its features and what makes it stand out.</p>
-      </div>
-      <div class="slide">
-        <img src="./images/case2.png" alt="Project 2">
-        <h3 class="project-title">Sumire PK</h3>
-        <p class="project-description">Description of Project 2. It focuses on delivering high-quality user experience with modern design.</p>
-      </div>
-      <div class="slide">
-        <img src="./images/case3.png" alt="Project 3">
-        <h3 class="project-title">Sudbarg Clothing Brand</h3>
-        <p class="project-description">Project 3 is a cutting-edge solution that helps streamline workflow and enhance productivity.</p>
-      </div>
-      <div class="slide">
-        <img src="./images/case4.png" alt="Project 3">
-        <h3 class="project-title">Tarkhan PK</h3>
-        <p class="project-description">Project 3 is a cutting-edge solution that helps streamline workflow and enhance productivity.</p>
-      </div>
-      <!-- Add more slides as needed -->
-    </div>
-    <!-- Navigation buttons -->
-    <button class="prev">❮</button>
-    <button class="next">❯</button>
-  </div>
-</section>
-
-<!-- ===== FAQ ===== -->
-<section id="faq" class="faq-section">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-question-circle"></i> FAQ</span>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-grid" data-aos="fade-up">
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-clock"></i> How long does it take to build my website?</div>
-                <div class="faq-a">Most projects complete in 5–14 days depending on complexity. Simple WordPress sites take 5–7 days, Shopify stores take 7–10 days, and custom apps take 2–4 weeks.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-redo"></i> Do you provide support after launch?</div>
-                <div class="faq-a">Yes! I offer 2 weeks of free support after every project for bug fixes and minor changes. After that, affordable monthly maintenance packages are available.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-edit"></i> Can I update the website myself after it's done?</div>
-                <div class="faq-a">Absolutely. I'll train you and hand over full access. WordPress and Shopify are especially easy to manage yourself — no coding needed.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-globe"></i> Do you work with international clients?</div>
-                <div class="faq-a">Yes! I work with clients in Pakistan, UAE, UK, USA and beyond. All communication is online via WhatsApp, email, or video call.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-credit-card"></i> What payment methods do you accept?</div>
-                <div class="faq-a">Bank transfer, Easypaisa, JazzCash, PayPal, and Wise. I take 50% upfront and 50% on delivery — so you only pay in full when you're happy.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-q"><i class="fas fa-shield-alt"></i> What if I'm not happy with the result?</div>
-                <div class="faq-a">I offer unlimited revisions until you're 100% satisfied. Your happiness is the goal — I won't close a project until you love it.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="contact">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
-            <h2 class="section-title">Let's Build Something Great</h2>
-            <p class="section-sub">Free consultation — no commitment needed. I reply within 2–4 hours.</p>
-        </div>
-        <div class="contact-wrapper">
-            <div class="contact-info" data-aos="fade-right">
-                <div class="c-card"><div class="c-icon"><i class="fas fa-envelope"></i></div><h4>Email</h4><p>Hasnainmuneer@gmail.com</p><a href="mailto:Hasnainmuneer@gmail.com">Send Email →</a></div>
-                <div class="c-card"><div class="c-icon wa-icon"><i class="fab fa-whatsapp"></i></div><h4>WhatsApp</h4><p>+92 314-2371339</p><a href="https://wa.me/923122958077" target="_blank">Chat Now →</a></div>
-                <div class="c-card"><div class="c-icon"><i class="fas fa-phone"></i></div><h4>Phone</h4><p>+92 314-2371339</p><a href="tel:+923122958077">Call Now →</a></div>
-                <div class="c-card"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><h4>Location</h4><p>Karachi, Pakistan</p></div>
-                <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115789.65882986917!2d66.99399929726562!3d24.8607343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="180" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="contact-form-box" data-aos="fade-left">
-                <form id="contactForm" action="https://formspree.io/f/xojynplo" method="POST">
-                    <input type="hidden" name="_subject" value="New Contact from Portfolio">
-                    <div class="form-row">
-                        <div class="form-group"><label><i class="fas fa-user"></i> Name</label><input type="text" name="name" placeholder="Your Name" required></div>
-                        <div class="form-group"><label><i class="fas fa-envelope"></i> Email</label><input type="email" name="_replyto" placeholder="your@email.com" required></div>
+                <!-- Step 2: Service Selection -->
+                <div class="form-step hidden" id="step2">
+                    <div class="step-title"><i class="fas fa-cogs"></i> Select Service</div>
+                    <div class="service-grid">
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Full Stack Web Development" required>
+                            <div class="srv-card">
+                                <i class="fas fa-globe" style="color:#7c3aed"></i>
+                                <span>Full Stack Web</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="MERN Stack Application">
+                            <div class="srv-card">
+                                <i class="fab fa-react" style="color:#61dafb"></i>
+                                <span>MERN Stack</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Mobile App React Native">
+                            <div class="srv-card">
+                                <i class="fas fa-mobile-alt" style="color:#f59e0b"></i>
+                                <span>Mobile App</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Backend API Development">
+                            <div class="srv-card">
+                                <i class="fas fa-server" style="color:#10b981"></i>
+                                <span>Backend API</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="WordPress Development">
+                            <div class="srv-card">
+                                <i class="fab fa-wordpress" style="color:#21759b"></i>
+                                <span>WordPress</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Shopify Store">
+                            <div class="srv-card">
+                                <i class="fab fa-shopify" style="color:#96bf48"></i>
+                                <span>Shopify</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Video Editing">
+                            <div class="srv-card">
+                                <i class="fas fa-video" style="color:#ef4444"></i>
+                                <span>Video Editing</span>
+                            </div>
+                        </label>
+                        <label class="srv-opt">
+                            <input type="radio" name="service" value="Database Design">
+                            <div class="srv-card">
+                                <i class="fas fa-database" style="color:#f59e0b"></i>
+                                <span>Database</span>
+                            </div>
+                        </label>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group"><label><i class="fas fa-phone"></i> Phone</label><input type="tel" name="phone" placeholder="+92 300 0000000"></div>
-                        <div class="form-group"><label><i class="fas fa-tag"></i> Subject</label><input type="text" name="subject" placeholder="Project Discussion" required></div>
+                    <div class="step-btns">
+                        <button type="button" class="btn btn-outline prev-step" data-prev="1">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <button type="button" class="btn btn-primary next-step" data-next="3">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <div class="form-group"><label><i class="fas fa-dollar-sign"></i> Budget</label>
-                        <select name="budget"><option value="">Select Budget</option><option>Less than $500</option><option>$500 - $1,000</option><option>$1,000 - $3,000</option><option>$3,000+</option></select>
-                    </div>
-                    <div class="form-group"><label><i class="fas fa-comment"></i> Message</label><textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea></div>
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
-                        <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
-                    </button>
-                    <div id="formMsg" class="form-msg"></div>
+                </div>
 
-                    <!-- WhatsApp CTA in form -->
-                    <div class="form-whatsapp-cta">
-                        <p>Or reach me directly on WhatsApp:</p>
-                        <a href="https://wa.me/923122958077?text=Hi%20Hasnain!" target="_blank" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                <!-- Step 3: Project Details -->
+                <div class="form-step hidden" id="step3">
+                    <div class="step-title"><i class="fas fa-file-alt"></i> Project Details</div>
+                    <div class="modal-grid">
+                        <div class="mfg">
+                            <label>Budget Range</label>
+                            <select name="budget">
+                                <option value="">Select Budget</option>
+                                <option>Less than $500</option>
+                                <option>$500 - $1,000</option>
+                                <option>$1,000 - $3,000</option>
+                                <option>$3,000 - $5,000</option>
+                                <option>$5,000+</option>
+                                <option>Let's Discuss</option>
+                            </select>
+                        </div>
+                        <div class="mfg">
+                            <label>Timeline</label>
+                            <select name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option>ASAP</option>
+                                <option>1-2 weeks</option>
+                                <option>1 month</option>
+                                <option>2-3 months</option>
+                                <option>3+ months</option>
+                                <option>Ongoing</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mfg full">
+                        <label>Project Description *</label>
+                        <textarea name="message" rows="4" placeholder="Describe your project in detail..."
+                            required></textarea>
+                    </div>
+                    <div class="step-btns">
+                        <button type="button" class="btn btn-outline prev-step" data-prev="2">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <button type="submit" class="btn btn-primary modal-submit">
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Request</span>
+                            <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i>
+                                Sending...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="hireFormMsg" class="form-msg"></div>
+            </form>
+
+            <!-- Success Screen -->
+            <div class="modal-success" id="modalSuccess">
+                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>Request Sent Successfully!</h3>
+                <p>Thank you! I'll contact you within 24 hours.</p>
+                <p class="success-sub">Meanwhile, feel free to reach me on WhatsApp:</p>
+                <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20just%20submitted%20a%20hire%20request."
+                    target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <button class="btn btn-outline" id="closeSuccess">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20your%20services."
+        target="_blank" class="whatsapp-float" id="waFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">Get Free Quote!</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <h2><span class="bracket">&lt;</span>Hasnain<span class="dot">.</span>dev<span
+                        class="bracket">/&gt;</span></h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                <li><a href="#pricing" class="nav-link"><i class="fas fa-tags"></i> Pricing</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right" data-aos-duration="600">
+                    <p class="greeting">👋 Hi there, I'm</p>
+                    <h1 class="name">Muhammad Hasnain Munir</h1>
+                    <div class="title-wrapper">
+                        <h2 class="title">I'm a <span class="typed-text"></span><span class="cursor">|</span></h2>
+                    </div>
+                    <p class="description">
+                        🚀 Helping businesses launch <span class="highlight">Shopify Stores</span>, <span
+                            class="highlight">WordPress Sites</span> &amp; custom web apps — fast, affordable, and built
+                        to grow your revenue.
+                    </p>
+                    <div class="stats-wrapper">
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="100">0</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="4">0</h3>
+                            <p>Years Exp</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="counter" data-target="95">0</h3>
+                            <p>Happy Clients</p>
+                        </div>
+
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
+                        <a href="resume/hasnain-resume.pdf" download="Muhammad-Hasnain-Munir-Resume.pdf"
+                            class="btn btn-secondary"><i class="fas fa-download"></i> Resume</a>
+                        <a href="#projects" class="btn btn-outline"><i class="fas fa-eye"></i> Work</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/hasnainmuneer" target="_blank" class="social-link"><i
+                                class="fab fa-linkedin-in"></i><span class="tooltip">LinkedIn</span></a>
+                        <a href="https://github.com/HasnainMu252" target="_blank" class="social-link"><i
+                                class="fab fa-github"></i><span class="tooltip">GitHub</span></a>
+                        <a href="mailto:Hasnainmuneer@gmail.com" class="social-link"><i
+                                class="fas fa-envelope"></i><span class="tooltip">Email</span></a>
+                        <a href="https://wa.me/923122958077" target="_blank" class="social-link"><i
+                                class="fab fa-whatsapp"></i><span class="tooltip">WhatsApp</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="600">
+                    <div class="image-wrapper">
+                        <div class="ring ring-1"></div>
+                        <div class="ring ring-2"></div>
+                        <div class="profile-card">
+                            <div class="card-glow"></div>
+                            <div class="profile-img">
+                                <img loading="eager" decoding="async" fetchpriority="high"
+                                    src="images/ChatGPT Image Apr 21, 2026, 01_27_53 PM.png"
+                                    onerror="this.src='https://ui-avatars.com/api/?name=Hasnain+Munir&size=400&background=7c3aed&color=fff&bold=true'"
+                                    alt="Muhammad Hasnain Munir">
+                            </div>
+                        </div>
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span>Available for work</span>
+                        </div>
+                        <div class="tech-badge badge-react"><i class="fab fa-react"></i> React</div>
+                        <div class="tech-badge badge-node"><i class="fab fa-shopify"></i> Shopify</div>
+                        <div class="tech-badge badge-mongo"><i class="fab fa-wordpress"></i> WordPress</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down"><a href="#about"><i class="fas fa-chevron-down"></i></a></div>
+        </div>
+    </section>
+
+    <!-- ===== PAIN POINTS ===== -->
+    <section id="pain" class="pain-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-exclamation-circle"></i> Sound Familiar?</span>
+                <h2 class="section-title">Does This Sound Like You?</h2>
+                <p class="section-sub">You're not alone — I've helped 10+ clients solve exactly these problems</p>
+            </div>
+            <div class="pain-grid" data-aos="fade-up">
+                <div class="pain-card">
+                    <div class="pain-icon">😩</div>
+                    <h4>"I need a professional store but don't know where to start"</h4>
+                    <p>I handle everything from domain setup to launch — you just share your vision.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">💸</div>
+                    <h4>"I paid someone before and got a bad, unfinished result"</h4>
+                    <p>I offer free revisions until you're 100% satisfied. No payment until you approve.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">⏰</div>
+                    <h4>"I need it done fast — I can't wait months"</h4>
+                    <p>Most projects launch in 5–14 days. I give you updates every 2 days.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">🌍</div>
+                    <h4>"I want to sell internationally but don't know how"</h4>
+                    <p>I set up international payments, currencies, and shipping — Shopify or WooCommerce.</p>
+                </div>
+            </div>
+            <div class="pain-cta" data-aos="fade-up">
+                <p>Ready to solve this once and for all?</p>
+                <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20help%20with%20my%20website."
+                    target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Let's Talk — Free
+                    Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="about-img-box">
+                        <img loading="lazy" decoding="async" src="images/ChatGPT Image Apr 21, 2026, 01_25_13 PM.png"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Hasnain+Munir&size=500&background=7c3aed&color=fff&bold=true'"
+                            alt="Hasnain Munir">
+                        <div class="exp-badge">
+                            <h3>4+</h3>
+                            <p>Years Exp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Full Stack <span class="highlight">MERN Developer</span></h3>
+                    <p>Passionate Software Engineering graduate from <strong>Iqra University</strong>, specializing in
+                        building exceptional digital experiences with modern technologies.</p>
+                    <p>Currently working as <strong>MERN Stack Developer</strong> at EduCast Pvt Ltd, building
+                        healthcare systems and scalable web applications.</p>
+                    <div class="about-grid">
+                        <div class="about-item"><i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Karachi, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="about-item"><i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>BS Computer Science</p>
+                            </div>
+                        </div>
+                        <div class="about-item"><i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Experience</h4>
+                                <p>4+ Years</p>
+                            </div>
+                        </div>
+                        <div class="about-item"><i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>0312-2958077</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-btns">
+                        <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-cogs"></i> What I Do</span>
+                <h2 class="section-title">My Services</h2>
+                <p class="section-sub">Professional services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="srv-box" data-aos="fade-up" data-aos-delay="50">
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#7c3aed,#9d5cf5)">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end web applications using MERN stack (MongoDB, Express, React, Node.js) with modern UI/UX
+                        and scalable architecture.</p>
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> React.js Frontend</li>
+                        <li><i class="fas fa-check"></i> Node.js/Express Backend</li>
+                        <li><i class="fas fa-check"></i> MongoDB / PostgreSQL</li>
+                        <li><i class="fas fa-check"></i> REST APIs & JWT Auth</li>
+                    </ul>
+                    <div class="srv-price">Starting from <strong>$199</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+
+                <div class="srv-box featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">⭐ Most Popular</div>
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Cross-platform mobile applications using React Native that run on both iOS and Android with
+                        native performance.</p>
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> React Native Apps</li>
+                        <li><i class="fas fa-check"></i> iOS & Android</li>
+                        <li><i class="fas fa-check"></i> Firebase Integration</li>
+                        <li><i class="fas fa-check"></i> Push Notifications</li>
+                    </ul>
+                    <div class="srv-price">Starting from <strong>$</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+                499
+                <div class="srv-box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#21759b,#4096c4)">
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                    <h3>WordPress Development</h3>
+                    <p>Professional WordPress websites with custom themes, plugins, WooCommerce stores and SEO
+                        optimization.</p>
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> Custom Theme Design</li>
+                        <li><i class="fas fa-check"></i> WooCommerce Store</li>
+                        <li><i class="fas fa-check"></i> Plugin Development</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                    </ul>
+                    <div class="srv-price">Starting from <strong>$99</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+
+                <div class="srv-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#96bf48,#5e8e3e)">
+                        <i class="fab fa-shopify"></i>
+                    </div>
+                    <h3>Shopify Development</h3>
+                    <p>Complete Shopify e-commerce stores with custom themes, product management, payment integration
+                        and optimization.</p>
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> Custom Shopify Theme</li>
+                        <li><i class="fas fa-check"></i> Product Management</li>
+                        <li><i class="fas fa-check"></i> Payment Integration</li>
+                        <li><i class="fas fa-check"></i> Store Optimization</li>
+                    </ul>
+                    <div class="srv-price">Starting from <strong>$199</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+
+                <div class="srv-box" data-aos="fade-up" data-aos-delay="250">
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Professional video editing for YouTube, social media, business presentations, reels and
+                        promotional content.</p>
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> YouTube Videos</li>
+                        <li><i class="fas fa-check"></i> Social Media Reels</li>
+                        <li><i class="fas fa-check"></i> Motion Graphics</li>
+                        <li><i class="fas fa-check"></i> Color Grading</li>
+                    </ul>
+                    <div class="srv-price">Starting from <strong>$49</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+
+                <div class="srv-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="srv-icon" style="background:linear-gradient(135deg,#10b981,#06b6d4)">
+<i class="fab fa-youtube"></i>                    </div>
+                    <h3>YouTube Automation</h3>
+                    <p>Complete faceless YouTube video production service including script, voiceover, editing,
+                        thumbnails, and SEO-friendly upload support.</p>
+
+                    <ul class="srv-list">
+                        <li><i class="fas fa-check"></i> Faceless Video Editing</li>
+                        <li><i class="fas fa-check"></i> Script & Voiceover Support</li>
+                        <li><i class="fas fa-check"></i> Engaging Shorts & Reels</li>
+                        <li><i class="fas fa-check"></i> Thumbnail & SEO Optimization</li>
+                    </ul>
+
+                    <div class="srv-price">Starting from <strong>$99</strong></div>
+                    <button class="btn btn-primary hire-btn srv-btn">Get Quote</button>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="services-cta" data-aos="fade-up">
+                <div class="cta-content">
+                    <h3>Not sure which service you need?</h3>
+                    <p>Let's talk! I'll help you figure out the best solution for your project.</p>
+                    <div class="cta-btns">
+                        <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Hire Me</button>
+                        <a href="https://wa.me/923122958077?text=Hi%20Hasnain!" target="_blank"
+                            class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3><span class="bracket">&lt;</span>Hasnain<span class="dot">.</span>dev<span class="bracket">/&gt;</span></h3>
-                <p>Building Shopify stores, WordPress websites & web apps that help businesses grow. Based in Karachi, Pakistan — serving clients worldwide.</p>
-                <div class="footer-available"><span class="status-dot"></span> Currently available for new projects</div>
-                <div class="footer-social">
-                    <a href="https://linkedin.com/in/hasnainmuneer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/HasnainMu252" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:Hasnainmuneer@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/923122958077" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact</a></li></ul></div>
-            <div class="footer-links"><h4>Services</h4><ul><li><a href="#services">Shopify Store</a></li><li><a href="#services">WordPress Site</a></li><li><a href="#services">WooCommerce</a></li><li><a href="#services">Dropshipping</a></li><li><a href="#services">Full Stack App</a></li></ul></div>
-            <div class="footer-contact"><h4>Contact Info</h4><p><i class="fas fa-envelope"></i> Hasnainmuneer@gmail.com</p><p><i class="fas fa-phone"></i> +92 314-2371339</p><p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p></div>
         </div>
-        <div class="footer-bottom"><p>© 2025 Muhammad Hasnain Munir. All rights reserved.</p><p>Made with <i class="fas fa-heart"></i> in Karachi</p></div>
-    </div>
-</footer>
+    </section>
 
-<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="process" class="how-it-works">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-route"></i> Simple Process</span>
+                <h2 class="section-title">How We Work Together</h2>
+                <p class="section-sub">From first message to a live website — here's exactly what happens</p>
+            </div>
+            <div class="process-grid" data-aos="fade-up">
+                <div class="process-step">
+                    <div class="process-num">01</div>
+                    <div class="process-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4>You Contact Me</h4>
+                    <p>Message me on WhatsApp or fill the form. Tell me what you need — no technical knowledge required.
+                    </p>
+                    <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20a%20website." target="_blank"
+                        class="process-link">Start Here →</a>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="process-num">02</div>
+                    <div class="process-icon"><i class="fas fa-comments"></i></div>
+                    <h4>Free Consultation</h4>
+                    <p>We have a quick call or chat to discuss your goals, timeline, and budget. I recommend the best
+                        solution.</p>
+                    <span class="process-tag">Within 2–4 Hours</span>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="process-num">03</div>
+                    <div class="process-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h4>I Build It</h4>
+                    <p>Development begins. I send you progress updates every 2 days so you're always in the loop.</p>
+                    <span class="process-tag">5–14 Days</span>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="process-num">04</div>
+                    <div class="process-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>You Launch 🚀</h4>
+                    <p>You review, request any changes, then we go live. I also train you to manage it yourself.</p>
+                    <span class="process-tag">2 Weeks Free Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script defer src="js/main.js"></script>
-<script defer src="js/sldier.js"></script>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-code"></i> My Skills</span>
+                <h2 class="section-title">Technical Expertise</h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-box-header">
+                        <div class="skill-box-icon"><i class="fas fa-palette"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fab fa-react"
+                                    style="color:#61dafb"></i><span>React.js</span><span class="pct">90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fab fa-js"
+                                    style="color:#f7df1e"></i><span>JavaScript</span><span class="pct">88%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fab fa-html5"
+                                    style="color:#e34f26"></i><span>HTML5/CSS3</span><span class="pct">95%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-box-header">
+                        <div class="skill-box-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fab fa-node-js"
+                                    style="color:#68a063"></i><span>Node.js</span><span class="pct">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-code"
+                                    style="color:#aaa"></i><span>Express.js</span><span class="pct">87%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-shield-alt"
+                                    style="color:#e0234e"></i><span>NestJS</span><span class="pct">80%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-key" style="color:#f59e0b"></i><span>JWT/REST
+                                    API</span><span class="pct">90%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-box-header">
+                        <div class="skill-box-icon"><i class="fas fa-database"></i></div>
+                        <h3>Database & Tools</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-leaf"
+                                    style="color:#47a248"></i><span>MongoDB</span><span class="pct">85%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-database"
+                                    style="color:#336791"></i><span>PostgreSQL</span><span class="pct">82%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fab fa-git-alt"
+                                    style="color:#f05032"></i><span>Git/GitHub</span><span class="pct">88%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><i class="fas fa-fire"
+                                    style="color:#ffca28"></i><span>Firebase</span><span class="pct">78%</span></div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-tags" data-aos="fade-up">
+                <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>Express.js</span>
+                <span>NestJS</span><span>PostgreSQL</span><span>React Native</span><span>TypeORM</span>
+                <span>JWT</span><span>Git</span><span>Firebase</span><span>WordPress</span>
+                <span>Shopify</span><span>Android</span><span>Agile</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Journey</span>
+                <h2 class="section-title">Experience & Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="tl-item" data-aos="fade-right">
+                    <div class="tl-icon working"><i class="fas fa-briefcase"></i></div>
+                    <div class="tl-content">
+                        <div class="tl-date"><i class="fas fa-calendar-alt"></i> Nov 2025 – Present</div>
+                        <h3>MERN Stack Developer</h3>
+                        <h4><i class="fas fa-building"></i> EduCast Pvt Ltd</h4>
+                        <ul>
+                            <li>Full-stack Dialysis Management System</li>
+                            <li>Scalable React.js & RESTful APIs</li>
+                            <li>MongoDB optimization</li>
+                        </ul>
+                        <div class="tl-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                    </div>
+                </div>
+                <div class="tl-item right" data-aos="fade-left">
+                    <div class="tl-icon"><i class="fas fa-university"></i></div>
+                    <div class="tl-content">
+                        <div class="tl-date"><i class="fas fa-calendar-alt"></i> July – Oct 2025</div>
+                        <h3>IT Intern</h3>
+                        <h4><i class="fas fa-landmark"></i> Meezan Bank</h4>
+                        <ul>
+                            <li>Mobile App deployment</li>
+                            <li>EMI FinTech & Payoneer integration</li>
+                            <li>API management</li>
+                        </ul>
+                        <div class="tl-tags"><span>API</span><span>Banking</span><span>Mobile</span></div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-right">
+                    <div class="tl-icon edu"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="tl-content">
+                        <div class="tl-date"><i class="fas fa-calendar-alt"></i> 2021 – 2025</div>
+                        <h3>BS Computer Science</h3>
+                        <h4><i class="fas fa-school"></i> Iqra University, Karachi</h4>
+                        <ul>
+                            <li>Java, JavaScript, OOP & DSA</li>
+                            <li>Database Management & SDLC</li>
+                        </ul>
+                        <div class="tl-tags"><span>CS</span><span>OOP</span><span>DSA</span></div>
+                    </div>
+                </div>
+                <div class="tl-item right" data-aos="fade-left">
+                    <div class="tl-icon cert"><i class="fas fa-certificate"></i></div>
+                    <div class="tl-content">
+                        <div class="tl-date"><i class="fas fa-calendar-alt"></i> April – May 2025</div>
+                        <h3>Full Stack Bootcamp</h3>
+                        <h4><i class="fas fa-laptop-code"></i> Ponder Alliance by Contour</h4>
+                        <ul>
+                            <li>NestJS, ReactJS & PostgreSQL</li>
+                            <li>JWT Authentication & CRUD</li>
+                        </ul>
+                        <div class="tl-tags"><span>NestJS</span><span>React</span><span>PostgreSQL</span></div>
+                    </div>
+                </div>
+                <div class="tl-item" data-aos="fade-right">
+                    <div class="tl-icon cert"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="tl-content">
+                        <div class="tl-date"><i class="fas fa-calendar-alt"></i> Feb – May 2024</div>
+                        <h3>Android Development</h3>
+                        <h4><i class="fas fa-chalkboard-teacher"></i> NAVTTC</h4>
+                        <ul>
+                            <li>Java/Kotlin & Android Studio</li>
+                            <li>Firebase & Play Store deployment</li>
+                        </ul>
+                        <div class="tl-tags"><span>Android</span><span>Java</span><span>Firebase</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-star"></i> Reviews</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-sub">Real feedback from real clients across Pakistan, UAE & UK</p>
+            </div>
+            <div class="testimonials-wrapper" data-aos="fade-up">
+                <div class="tst-card">
+                    <div class="tst-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Hasnain built my Shopify dropshipping store in just 6 days. Very professional, responsive, and
+                        the design was exactly what I wanted. Sales started coming in the first week!"</p>
+                    <div class="tst-author">
+                        <div class="tst-avatar">AK</div>
+                        <div><strong>Ahmed K.</strong> 🇵🇰<br><small>Shopify Dropshipping Store</small></div>
+                    </div>
+                </div>
+                <div class="tst-card">
+                    <div class="tst-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excellent WordPress website built for my business. Very clean, fast, and mobile-friendly.
+                        Hasnain explained everything clearly and delivered on time. Highly recommend!"</p>
+                    <div class="tst-author">
+                        <div class="tst-avatar">SR</div>
+                        <div><strong>Sara R.</strong> 🇬🇧<br><small>WordPress Business Website</small></div>
+                    </div>
+                </div>
+                <div class="tst-card">
+                    <div class="tst-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"I needed a WooCommerce store fast and Hasnain delivered in 10 days. The payment integration and
+                        inventory setup worked perfectly. Will hire again for my next project."</p>
+                    <div class="tst-author">
+                        <div class="tst-avatar">MF</div>
+                        <div><strong>Mohammad F.</strong> 🇦🇪<br><small>WooCommerce eCommerce Store</small></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tst-cta" data-aos="fade-up">
+                <p>⭐ Join 10+ happy clients — let's build yours next</p>
+                <button class="btn btn-primary hire-btn"><i class="fas fa-handshake"></i> Start My Project</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="pricing-section price-card featured">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-tags"></i> Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-sub">No hidden fees. No surprises. Pay only when you're happy.</p>
+            </div>
+            <div class="pricing-grid" data-aos="fade-up">
+                <div class="price-card">
+                    <div class="price-label">Starter</div>
+                    <div class="price-amount">$99<span>/project</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> WordPress Basic Site</li>
+                        <li><i class="fas fa-check"></i> Up to 5 pages</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> 1 Week Delivery</li>
+                        <li><i class="fas fa-check"></i> 1 Week Free Support</li>
+                    </ul>
+                    <button class="btn btn-outline hire-btn">Get Started</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="price-badge">⭐ Most Popular</div>
+                    <div class="price-label">Business</div>
+                    <div class="price-amount">$199<span>/project</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> Shopify or WooCommerce</li>
+                        <li><i class="fas fa-check"></i> Up to 20 products</li>
+                        <li><i class="fas fa-check"></i> Payment Integration</li>
+                        <li><i class="fas fa-check"></i> SEO Basic Setup</li>
+                        <li><i class="fas fa-check"></i> 2 Weeks Delivery</li>
+                        <li><i class="fas fa-check"></i> 2 Weeks Free Support</li>
+                    </ul>
+                    <button class="btn btn-primary hire-btn">Get Started</button>
+                </div>
+                <div class="price-card">
+                    <div class="price-label">Premium</div>
+                    <div class="price-amount">$499<span>/project</span></div>
+                    <ul class="price-list">
+                        <li><i class="fas fa-check"></i> Full Stack Web App</li>
+                        <li><i class="fas fa-check"></i> Custom Features</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> Custom Timeline</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20a%20custom%20quote."
+                        target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Let's Discuss</a>
+                </div>
+            </div>
+            <p class="pricing-note" data-aos="fade-up">💬 Not sure which plan fits? <a
+                    href="https://wa.me/923122958077?text=Hi%20Hasnain!%20I%20need%20help%20choosing%20a%20plan."
+                    target="_blank">Message me on WhatsApp</a> — I'll recommend the right one for free.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-slider">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="./images/case1.png" alt="Project 1">
+                    <h3 class="project-title">Zelvyn Lifestyle
+                    </h3>
+                    <p class="project-description">This is a brief description of Project 1, explaining its features and
+                        what makes it stand out.</p>
+                </div>
+                <div class="slide">
+                    <img src="./images/case2.png" alt="Project 2">
+                    <h3 class="project-title">Sumire PK</h3>
+                    <p class="project-description">Description of Project 2. It focuses on delivering high-quality user
+                        experience with modern design.</p>
+                </div>
+                <div class="slide">
+                    <img src="./images/case3.png" alt="Project 3">
+                    <h3 class="project-title">Sudbarg Clothing Brand</h3>
+                    <p class="project-description">Project 3 is a cutting-edge solution that helps streamline workflow
+                        and enhance productivity.</p>
+                </div>
+                <div class="slide">
+                    <img src="./images/case4.png" alt="Project 3">
+                    <h3 class="project-title">Tarkhan PK</h3>
+                    <p class="project-description">Project 3 is a cutting-edge solution that helps streamline workflow
+                        and enhance productivity.</p>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Navigation buttons -->
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-question-circle"></i> FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-clock"></i> How long does it take to build my website?</div>
+                    <div class="faq-a">Most projects complete in 5–14 days depending on complexity. Simple WordPress
+                        sites take 5–7 days, Shopify stores take 7–10 days, and custom apps take 2–4 weeks.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-redo"></i> Do you provide support after launch?</div>
+                    <div class="faq-a">Yes! I offer 2 weeks of free support after every project for bug fixes and minor
+                        changes. After that, affordable monthly maintenance packages are available.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-edit"></i> Can I update the website myself after it's done?
+                    </div>
+                    <div class="faq-a">Absolutely. I'll train you and hand over full access. WordPress and Shopify are
+                        especially easy to manage yourself — no coding needed.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-globe"></i> Do you work with international clients?</div>
+                    <div class="faq-a">Yes! I work with clients in Pakistan, UAE, UK, USA and beyond. All communication
+                        is online via WhatsApp, email, or video call.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-credit-card"></i> What payment methods do you accept?</div>
+                    <div class="faq-a">Bank transfer, Easypaisa, JazzCash, PayPal, and Wise. I take 50% upfront and 50%
+                        on delivery — so you only pay in full when you're happy.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q"><i class="fas fa-shield-alt"></i> What if I'm not happy with the result?</div>
+                    <div class="faq-a">I offer unlimited revisions until you're 100% satisfied. Your happiness is the
+                        goal — I won't close a project until you love it.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+                <h2 class="section-title">Let's Build Something Great</h2>
+                <p class="section-sub">Free consultation — no commitment needed. I reply within 2–4 hours.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="c-card">
+                        <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>Hasnainmuneer@gmail.com</p><a href="mailto:Hasnainmuneer@gmail.com">Send Email →</a>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-icon wa-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>WhatsApp</h4>
+                        <p>+92 312-2958077</p><a href="https://wa.me/923122958077" target="_blank">Chat Now →</a>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-icon"><i class="fas fa-phone"></i></div>
+                        <h4>Phone</h4>
+                        <p>+92 312-2958077</p><a href="tel:+923122958077">Call Now →</a>
+                    </div>
+                    <div class="c-card">
+                        <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115789.65882986917!2d66.99399929726562!3d24.8607343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                            width="100%" height="180" style="border:0;border-radius:12px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form-box" data-aos="fade-left">
+                    <form id="contactForm" action="https://formspree.io/f/xojynplo" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact from Portfolio">
+                        <div class="form-row">
+                            <div class="form-group"><label><i class="fas fa-user"></i> Name</label><input type="text"
+                                    name="name" placeholder="Your Name" required></div>
+                            <div class="form-group"><label><i class="fas fa-envelope"></i> Email</label><input
+                                    type="email" name="_replyto" placeholder="your@email.com" required></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label><i class="fas fa-phone"></i> Phone</label><input type="tel"
+                                    name="phone" placeholder="+92 300 0000000"></div>
+                            <div class="form-group"><label><i class="fas fa-tag"></i> Subject</label><input type="text"
+                                    name="subject" placeholder="Project Discussion" required></div>
+                        </div>
+                        <div class="form-group"><label><i class="fas fa-dollar-sign"></i> Budget</label>
+                            <select name="budget">
+                                <option value="">Select Budget</option>
+                                <option>Less than $500</option>
+                                <option>$500 - $1,000</option>
+                                <option>$1,000 - $3,000</option>
+                                <option>$3,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label><i class="fas fa-comment"></i> Message</label><textarea
+                                name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                            <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i>
+                                Sending...</span>
+                        </button>
+                        <div id="formMsg" class="form-msg"></div>
+
+                        <!-- WhatsApp CTA in form -->
+                        <div class="form-whatsapp-cta">
+                            <p>Or reach me directly on WhatsApp:</p>
+                            <a href="https://wa.me/923122958077?text=Hi%20Hasnain!" target="_blank"
+                                class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><span class="bracket">&lt;</span>Hasnain<span class="dot">.</span>dev<span
+                            class="bracket">/&gt;</span></h3>
+                    <p>Building Shopify stores, WordPress websites & web apps that help businesses grow. Based in
+                        Karachi, Pakistan — serving clients worldwide.</p>
+                    <div class="footer-available"><span class="status-dot"></span> Currently available for new projects
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/hasnainmuneer" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/HasnainMu252" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:Hasnainmuneer@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/923122958077" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Shopify Store</a></li>
+                        <li><a href="#services">WordPress Site</a></li>
+                        <li><a href="#services">WooCommerce</a></li>
+                        <li><a href="#services">Dropshipping</a></li>
+                        <li><a href="#services">Full Stack App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> Hasnainmuneer@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92 314-2371339</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Muhammad Hasnain Munir. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> in Karachi</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/sldier.js"></script>
 </body>
+
 </html>
